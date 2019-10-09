@@ -12,23 +12,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/3.0.0/css/ionicons.css" rel="stylesheet">
     <link href="./theme.css" rel="stylesheet">
     <link href="./template.css" rel="stylesheet">
-    <script src='https://www.google.com/recaptcha/api.js'></script>
-    <script>
-        function get_action(form) 
-        {
-            var v = grecaptcha.getResponse();
-            if(v.length == 0)
-            {
-                document.getElementById('captcha').innerHTML="You can't leave Captcha Code empty";
-                return false;
-            }
-            else
-            {
-                document.getElementById('captcha').innerHTML="Captcha completed";
-                return true; 
-            }
-        }
-    </script>
   </head>
   
   <body data-spy="scroll" data-target="#navbar1" data-offset="60">
