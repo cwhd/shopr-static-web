@@ -4,20 +4,31 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Shopr - your personal shopping assistant</title>
-    <meta name="description" content="Signal is a free, open source Bootstrap 4 theme" />
-    <meta name="generator" content="Themestr.app">
-    <link rel="icon" href="http://themes.guide/favicon.ico" type="image/x-icon" />
+    <meta name="description" content="Shopr is a friendly shopping service that works for you" />
+    <link rel="icon" href="shopr-logo.png" type="image/png" />
     <link rel="shortcut icon" href="http://themes.guide/favicon.ico" type="image/x-icon" />
     <meta property="og:image" name="twitter:image" content="http://bootstrap.themes.guide/assets/ss_signal.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@ThemesGuide">
-    <meta name="twitter:creator" content="@ThemesGuide">
-    <meta name="twitter:title" content="Open-source Bootstrap 4 Themes">
-    <meta name="twitter:description" content="Download Signal - free, open source Bootstrap 4 theme by Themes.guide">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/3.0.0/css/ionicons.css" rel="stylesheet">
     <link href="./theme.css" rel="stylesheet">
     <link href="./template.css" rel="stylesheet">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script>
+        function get_action(form) 
+        {
+            var v = grecaptcha.getResponse();
+            if(v.length == 0)
+            {
+                document.getElementById('captcha').innerHTML="You can't leave Captcha Code empty";
+                return false;
+            }
+            else
+            {
+                document.getElementById('captcha').innerHTML="Captcha completed";
+                return true; 
+            }
+        }
+    </script>
   </head>
   
   <body data-spy="scroll" data-target="#navbar1" data-offset="60">
@@ -27,19 +38,9 @@
                 <div class="col-12">
                     <div class="text-center m-0 vh-100 d-flex flex-column justify-content-center text-light">
                         <h1 class="display-4">Shopr</h1>
-                        <p class="lead">AI shopping for you with crytocurrency. We are working on our alpha product, sign up 
+                        <p class="lead">AI shopping for you with cryptocurrency. We are working on our alpha product, stay tuned 
                             for information on product releases.
                         </p>
-                        <div class="row">
-                            <div class="col-lg-4 col-sm-6 mx-auto">
-                                <div class="input-group mb-3">
-                                  <input type="text" class="form-control form-control-lg" placeholder="your@email">
-                                  <div class="input-group-append">
-                                    <button class="btn btn-outline-light btn-lg rounded-right" type="button">Sign-up</button>
-                                  </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -47,7 +48,7 @@
     </header>
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary" id="navbar1">
         <div class="container">
-            <a class="navbar-brand mr-1 mb-1 mt-0" href="#">Shopr</a>
+            <a class="navbar-brand mr-1 mb-1 mt-0" href="#"><img src="shopr-logo.png" height="100" /></a>
             <div class="navbar-collapse collapse justify-content-center" id="collapsingNavbar">
                 <!--
                 <ul class="navbar-nav ml-auto">
@@ -108,9 +109,9 @@
                             <div class="card h-100">
                                 <div class="card-body d-flex flex-column justify-content-center align-items-center">
                                     <h1 class="display-2 text-primary"><span class="ion ion-ios-cart-outline"></span></h1>
-                                    <h4 class="card-title text-primary">Advocate</h4>
+                                    <h4 class="card-title text-primary">Save Money and Time</h4>
                                     <p class="card-text">Shopr manages your shopping with your best interest in mind - always. 
-                                        She can manage your day to day needs, wishlists, and find you deals that you care about.</p>
+                                        She can manage your day to day shopping, wishlists, and find you deals that you care about.</p>
                                 </div>
                             </div>
                         </div>
@@ -140,6 +141,7 @@
 
     </main>
         <footer id="footer" class="bg-dark text-light py-5">
+            &copy; 2019 Shopr
             <!--
         <div class="container py-5">
             <div class="row">
