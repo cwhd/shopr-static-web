@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/c3b1cff0-ca62-4c69-b0ba-3a6b354e94f1/resourceGroups/shopmove/providers/Microsoft.Web/sites/shopr-splash",
+    "appService.deploySubpath": ""
+}
